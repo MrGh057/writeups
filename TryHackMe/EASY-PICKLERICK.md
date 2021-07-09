@@ -23,7 +23,7 @@ $ sudo nmap -sS --min-rate 5000 --open -n -Pn -vvv 10.10.209.28 -oG ScanPort
 
 Con el script anterior lo que hacemos es analizar de manera general todos los
 puertos abiertos y después sacar los puertos abierto y poder escanearlos con 
-el siguiente scritp de forma detallada                                       
+el siguiente scritp de forma detallada.                                       
 
 $ nmap -sC -sV -p22,80 10.10.209.28 -oN Ports                                
 De esta forma con ambos scripts ya conseguimos lo que necesitamos acerca de  
@@ -35,7 +35,7 @@ Entrando a la página no encontramos nada importante en el frontend o interfaz
 por lo tanto daremos ctrl+u para ver el código fuente por si encontramos algo
 que sean indicios de algo. Analizando el código fuente vemos comentarizado
 lo siguiente:                                                                
-
+' ' ' '
 Username: R1ckRul3s                                                          
 
 Normalmente nombres así pueden ser potenciales usuarios para poder hacer el
