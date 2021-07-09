@@ -1,10 +1,10 @@
 ''' 
 https://tryhackme.com/room/picklerick
-PICKEL RICK --> EASY
+# PICKEL RICK --> EASY
 '''
 
 ' ' ' '
-----> ESCANEO                                         
+### --> ESCANEO                                         
 
 Para comenzar con esta máquia una vez que la inciamos en TryHackMe utilizaremos
 el ping con el objetivo de saber qué ttl nos resuelve esto mediante una traza ICMP:                                                
@@ -14,7 +14,7 @@ $ ping -c 1  10.10.209.28
 Gracias a esto conocemos el sistema operativo                                
 mediante el ttl.                                                            
 
-----> MAPEO DE PUERTOS:
+### --> MAPEO DE PUERTOS:
 
 Para comenzar con el scaneo de los puerto utilizo este script de nmap el cual
 está optimizado para que sea lo suficientemente rápido y no perder tiempo:   
@@ -69,12 +69,16 @@ viene como login.php, por lo tanto abriremos primero eso de la misma forma
 que abrimos los demás archivos. Una vez abierto los dos vemos que nos dirijen
 al mismo login por lo tanto no haremos mas que intentar burlar este login.
 Lo primero a intentar es utilizar credenciales por defecto como:             
-_________________                                                            
-| user  |  pass |  Entre otras contraseñas, pero al no coincidir con estas   
-|-------|-------|  primers dos, lo mas recomendable es probar con lo que ya  
-| root  |  root |  tenemos:                                                  
-| admin | admin |  Username: R1ckRul3s                                       
------------------  Password: Wubbalubbadubdub                                
+
+admin = admin
+user = pass
+root = root
+
+Entre otras contraseñas, pero al no coincidir con estas   
+primers dos, lo mas recomendable es probar con lo que ya  
+tenemos:                                                  
+*Username: R1ckRul3s                                       
+*Password: Wubbalubbadubdub                                
                                                                              
 Utilizando estas credenciales vemos que nos da acceso a un panel de ejecucion
 algunas veces nos pueden dar este tipo de paneles con una bash, pero primero 
@@ -83,9 +87,9 @@ rente lenguajes, me di cuenta que es terminal de comandos, por lo tanto con
 los siguientes comando averiguaremos quienes somos, donde estamos y que hay
 donde yo estoy:                                                              
 
-$ pwd    --> en que directorio estamos
-$ whoami --> quien soy en el sistema
-$ ls     --> lista directorio actual
+*$ pwd    --> en que directorio estamos
+*$ whoami --> quien soy en el sistema
+*$ ls     --> lista directorio actual
 
 con el comando ls encontramos el archivo donde encontraremos una flag o
 ingrediente, utilizamos varios comando, pero nos damos cuenta que no deja uti
